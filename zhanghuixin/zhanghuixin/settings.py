@@ -72,12 +72,18 @@ WSGI_APPLICATION = 'zhanghuixin.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+DB_NAME = 'zhang'
+DB_USER = 'root'
+DB_PWD = '1111'
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PWD,                  # Not used with sqlite3.
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    },
 }
 
 
