@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'zhanghuixin.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 DB_NAME = 'zhang'
 DB_USER = 'root'
-DB_PWD = '1111'
+DB_PWD = '1234qwer'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
