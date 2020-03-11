@@ -1,8 +1,8 @@
 from django.urls import path
-from translation.views import TranslationsView
+from translation.views import translationsView
 
 
 urlpatterns = [
-    path('', TranslationsView.as_view()),
+    path('', translationsView, name='translationsView'),
 
 ]
