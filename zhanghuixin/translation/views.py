@@ -3,6 +3,7 @@ import json
 from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework.views import APIView
+from rest_framework import permissions
 
 
 def get_ch_value(num):
@@ -39,6 +40,8 @@ def get_ch_value(num):
 
 
 class TranslationsView(APIView):
+    permission_classes = (permissions.AllowAny)
+
     def get(self, request):
         req = dict(request.query_params)
         resp = {'name': '请输入正确的阿拉伯数字'}
